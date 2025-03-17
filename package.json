@@ -1,0 +1,17 @@
+{
+  "name": "total-component",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-all":"npm -ws install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "ikee-components",
+    "my-react-app"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
