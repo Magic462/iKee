@@ -23,10 +23,8 @@ const MenuItem: React.FC<MenuItemProps> = ({
     const className = `menu-item ${disabled ? 'disabled' : ''} ${isActive ? 'active' : ''}`;
 
     const handleItemClick = (e: React.MouseEvent) => {
-        console.log('Item clicked, disabled:', disabled);
         if (disabled) {
-            e.preventDefault(); // 阻止默认行为
-            // console.log('Click event ignored due to disabled state.');
+            e.preventDefault();
             return; // 直接返回，不执行后续操作
         }
         

@@ -20,7 +20,7 @@ export interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
 /**
  * 自动完成输入框组件
  */
-export const AutoComplete: FC<AutoCompleteProps> = (props) => {
+export const AutoComplete: FC<AutoCompleteProps> = (props: AutoCompleteProps) => {
     const { fetchSuggestions, onSelect, value, renderOption, ...restProps } = props;
 
     const [inputValue, setInputValue] = useState('');
