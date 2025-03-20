@@ -1,8 +1,8 @@
 import React from 'react';
 // import './Menu.scss'
-// import Menu from '../components/Menu/Menu';
-// import MenuItem from '../components/Menu/MenuItem';
-import {Menu,MenuItem} from 'ikee-components'
+import Menu from '../components/Menu/Menu';
+import MenuItem from '../components/Menu/MenuItem';
+// import {Menu,MenuItem} from 'ikee-components'
 
 
 const Menupage: React.FC = () => {

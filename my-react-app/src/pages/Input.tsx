@@ -1,10 +1,10 @@
 import React from 'react';
-// import Input from '../components/Input/Input';
+import Input from '../components/Input/Input';
 // import './Input.scss';
-import { Input } from 'ikee-components'
-// import AutoComplete from '../components/Autocomplete/Autocomplete';
+// import { Input } from 'ikee-components'
+import AutoComplete from '../components/Autocomplete/Autocomplete';
 // import { DataSourceType } from 'ikee-components'
-import {AutoComplete} from 'ikee-components';
+// import {AutoComplete} from 'ikee-components';
 interface itemProps {
     value: string;
     // number?: number;

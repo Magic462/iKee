@@ -1,6 +1,6 @@
 import React from 'react';
-// import Button from '../components/Button/Button';
-import {Button} from 'ikee-components'
+import Button from '../components/Button/Button';
+// import {Button} from 'ikee-components'
 // import './Button.scss'
 
 const Buttonpage: React.FC = () => {
