@@ -1,5 +1,1 @@
-name = "ikee"
-type = "javascript"
-
-[env.production]
-main = "dist/main.js" # 确保这里指向正确的入口文件
+WRANGLER_SEND_METRICS=false
