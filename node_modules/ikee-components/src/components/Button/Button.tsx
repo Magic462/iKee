@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.scss'
 
 interface ButtonProps {
     round?: boolean;
@@ -9,7 +10,7 @@ interface ButtonProps {
     children: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
     round = false,
     disabled = false,
     size = 'medium',
@@ -21,4 +22,4 @@ export const Button: React.FC<ButtonProps> = ({
     return <button className={className} disabled={ disabled }>{children}</button>;
 };
 
-// export default Button;
+export default Button;

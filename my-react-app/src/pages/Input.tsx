@@ -1,30 +1,37 @@
 import React from 'react';
 // import Input from '../components/Input/Input';
 // import './Input.scss';
-import {Input} from 'ikee-components'
-// import Autocomplete, { DataSourceType } from '../components/Autocomplete/Autocomplete';
-import {AutoComplete} from 'ikee-components'
-
+import { Input } from 'ikee-components'
+// import AutoComplete from '../components/Autocomplete/Autocomplete';
+// import { DataSourceType } from 'ikee-components'
+import {AutoComplete} from 'ikee-components';
+// interface itemProps {
+//     value: string;
+//     number?: number;ss
+//   }
 const Inputpage: React.FC = () => {
     // 获取建议的方法
-    // const fetchSuggestions = (query: string): Promise<DataSourceType[]> => {
-    //     return new Promise((resolve) => {
-    //         const data = ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple', 'Strawberry'];
-    //         const results = data.filter(item => item.toLowerCase().includes(query.toLowerCase()));
-    //         resolve(results.map(item => ({ value: item })));
-    //     });
-    // };
-
-    const fetchSuggestions = (query) => {
-        const suggestions = [
-            { value: 'Apple' },
-            { value: 'Banana' },
-            { value: 'Cherry' },
-            { value: 'Date' },
-            { value: 'Elderberry' }
-        ];
-        return suggestions.filter(item => item.value.toLowerCase().includes(query.toLowerCase()));
+    const fetchSuggestions = (query: string): Promise<DataSourceType[]> => {
+        return new Promise((resolve) => {
+            const data = ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple', 'Strawberry'];
+            const results = data.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+            resolve(results.map(item => ({ value: item })));
+        });
     };
+    // const arrayList: DataSourceType<itemProps>[] = [
+    //     {value: 'abc', number: 1}, {value: 'def', number: 1}, {value: 'ghi', number: 1},
+    //     {value: 'jkl', number: 1}, {value: 'mno', number: 1}, {value: 'pqr', number: 1},
+    //     {value: 'stu', number: 1}, {value: 'vwx', number: 1}, {value: 'yz', number: 1}]
+    // const fetchSuggestions = (query) => {
+    //     const suggestions = [
+    //         { value: 'Apple' },
+    //         { value: 'Banana' },
+    //         { value: 'Cherry' },
+    //         { value: 'Date' },
+    //         { value: 'Elderberry' }
+    //     ];
+    //     return suggestions.filter(item => item.value.toLowerCase().includes(query.toLowerCase()));
+    // };
 
     const handleSelect = (item) => {
         console.log('Selected:', item);
@@ -55,11 +62,11 @@ const Inputpage: React.FC = () => {
             <h4>Autocomplete</h4>
             <p>通过 <code> Autocomplete </code> 实现输入框搜索内容筛选</p>
             <div className="contain">
-                <AutoComplete 
-                    fetchSuggestions={fetchSuggestions} 
-                    placeholder="搜索水果" 
-                    onSelect={handleSelect} 
-                    renderOption={renderOption} 
+            <AutoComplete
+                    fetchSuggestions={fetchSuggestions}
+                    placeholder="搜索水果"
+                    onSelect={handleSelect}
+                    renderOption={renderOption}
                 />
             </div>
         </div>

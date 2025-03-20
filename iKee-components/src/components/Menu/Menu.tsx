@@ -1,6 +1,5 @@
-// import React, { createContext, useContext,useState, Children, cloneElement, ReactElement, createElement } from 'react';
 import React, { createContext, useState, Children, ReactElement } from 'react';
-// import './Menu.scss';
+import './Menu.scss';
 import MenuItem, { MenuItemProps } from './MenuItem';
 
 

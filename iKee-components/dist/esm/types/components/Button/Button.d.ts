@@ -1,4 +1,5 @@
 import React from 'react';
+import './Button.scss';
 interface ButtonProps {
     round?: boolean;
     disabled?: boolean;
@@ -6,5 +7,5 @@ interface ButtonProps {
     type?: 'primary' | 'secondary' | 'danger';
     children: React.ReactNode;
 }
-export declare const Button: React.FC<ButtonProps>;
-export {};
+declare const Button: React.FC<ButtonProps>;
+export default Button;

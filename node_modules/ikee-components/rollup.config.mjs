@@ -1,10 +1,11 @@
-import {readFileSync} from 'node:fs';
+import { readFileSync } from 'node:fs';
 
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import dts from 'rollup-plugin-dts';
-import postcss from 'rollup-plugin-postcss';
+// import postcss from 'rollup-plugin-postcss';
+import scss from 'rollup-plugin-scss';
 
 const pkg = JSON.parse(readFileSync('./package.json'));
 
@@ -29,20 +30,23 @@ export default [
 			commonjs(),
 			typescript({
 				tsconfig: './tsconfig.json',
-                                //导出声明文件
+				//导出声明文件
 				declaration: true,
-                                //类型目录
+				//类型目录
 				declarationDir: 'types',
-                                //输出目录
+				//输出目录
 				outDir: 'dist',
 			}),
-			postcss(),
+			scss({
+				api: 'modern', 
+				fileName: 'style.css', // 打包后的 CSS 文件
+			}),
 		],
 	},
 	// 第二步将esm打包出的文件再打包到index.d.ts中去
 	{
 		input: './dist/esm/types/index.d.ts',
-		output: [{file: './dist/index.d.ts', format: 'esm'}],
+		output: [{ file: './dist/index.d.ts', format: 'esm' }],
 		plugins: [dts()],
 		external: [/\.(css|less|scss)$/],
 	},

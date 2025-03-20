@@ -2,7 +2,7 @@
 import React, { createContext, useState, Children, ReactElement } from 'react';
 // import './Menu.scss';
 import MenuItem, { MenuItemProps } from './MenuItem';
-
+import { MenuProvider } from './MenuContext';
 
 interface MenuContextProps {
     activeIndex: number;
@@ -51,6 +51,20 @@ const Menu: React.FC<MenuProps> = ({
                 })}
             </ul>
         </MenuContext.Provider>
+
+        // <MenuProvider defaultIndex={defaultIndex} onSelect={onSelect}>
+        //     <ul className={`menu ${mode}`}>
+        //         {Children.map(children, (child,index) => {
+        //             if (!React.isValidElement<MenuItemProps>(child) || child.type !== MenuItem) {
+        //                 console.error('Menu can only have MenuItem as children');
+        //                 return null;
+        //             }
+        //             return React.cloneElement(child, {
+        //                 onClick: () => handleClick(index), // 确保传递当前项的索引
+        //               });
+        //         })}
+        //     </ul>
+        // </MenuProvider>
     );
 };
 

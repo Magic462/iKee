@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import './Menu.scss';
 import MenuItem from './MenuItem';
 interface MenuContextProps {
     activeIndex: number;

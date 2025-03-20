@@ -12,5 +12,5 @@ export interface AutoCompleteProps extends Omit<InputProps, 'onSelect'> {
 /**
  * 自动完成输入框组件
  */
-export declare const AutoComplete: FC<AutoCompleteProps>;
+declare const AutoComplete: FC<AutoCompleteProps>;
 export default AutoComplete;

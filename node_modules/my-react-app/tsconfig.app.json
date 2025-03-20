@@ -8,10 +8,10 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "isolatedModules": true,
     "moduleDetection": "force",
-    "jsx": "react-jsx",
+    "jsx": "react",
 
     /* Linting */
     "strict": true,
