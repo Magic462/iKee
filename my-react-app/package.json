@@ -7,7 +7,7 @@
   "module": "dist/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build-ts && npm run build-css && node update-imports.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest",
