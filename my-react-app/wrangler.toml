@@ -1,4 +1,4 @@
-name = "my-react-app"
+name = "ikee"
 type = "javascript"
 
 [env.production]
