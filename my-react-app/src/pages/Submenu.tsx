@@ -1,7 +1,7 @@
 import React from 'react';
 // import './Menu.scss'
 // import Submenu from '../components/Menu/Submenu';
-// import {Submenu} from 'ikee-components'
+import {Submenu} from 'ikee-components'
 
 const Submenupage: React.FC = () => {
 

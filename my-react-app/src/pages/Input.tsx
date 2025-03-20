@@ -5,13 +5,13 @@ import { Input } from 'ikee-components'
 // import AutoComplete from '../components/Autocomplete/Autocomplete';
 // import { DataSourceType } from 'ikee-components'
 import {AutoComplete} from 'ikee-components';
-// interface itemProps {
-//     value: string;
-//     number?: number;ss
-//   }
+interface itemProps {
+    value: string;
+    // number?: number;
+  }
 const Inputpage: React.FC = () => {
     // 获取建议的方法
-    const fetchSuggestions = (query: string): Promise<DataSourceType[]> => {
+    const fetchSuggestions = (query: string): Promise<itemProps[]> => {
         return new Promise((resolve) => {
             const data = ['Apple', 'Banana', 'Orange', 'Mango', 'Pineapple', 'Strawberry'];
             const results = data.filter(item => item.toLowerCase().includes(query.toLowerCase()));
@@ -22,7 +22,7 @@ const Inputpage: React.FC = () => {
     //     {value: 'abc', number: 1}, {value: 'def', number: 1}, {value: 'ghi', number: 1},
     //     {value: 'jkl', number: 1}, {value: 'mno', number: 1}, {value: 'pqr', number: 1},
     //     {value: 'stu', number: 1}, {value: 'vwx', number: 1}, {value: 'yz', number: 1}]
-    // const fetchSuggestions = (query) => {
+    // const fetchSuggestions = (query:itemProps) => {
     //     const suggestions = [
     //         { value: 'Apple' },
     //         { value: 'Banana' },
@@ -33,11 +33,11 @@ const Inputpage: React.FC = () => {
     //     return suggestions.filter(item => item.value.toLowerCase().includes(query.toLowerCase()));
     // };
 
-    const handleSelect = (item) => {
+    const handleSelect = (item:itemProps) => {
         console.log('Selected:', item);
     };
 
-    const renderOption = (item) => {
+    const renderOption = (item:itemProps) => {
         return <h3>{item.value}</h3>;
     };
 
