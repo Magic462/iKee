@@ -1,5 +1,6 @@
 // import Button  from './Button'; // 确保正确导入你的 Button 组件
-import {Button} from 'ikee-components'
+// import {Button} from 'ikee-components'
+import Button from '../components/Button'
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react';
 

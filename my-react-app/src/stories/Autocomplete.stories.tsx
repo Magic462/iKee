@@ -1,6 +1,6 @@
 
 // import {AutoComplete} from './Autocomplete';
-import {AutoComplete} from 'ikee-components'
+import AutoComplete from '../components/Autocomplete';
 
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react';

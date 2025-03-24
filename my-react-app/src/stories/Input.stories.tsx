@@ -1,7 +1,7 @@
 
 // import Input  from './Input'; // 确保正确导入你的 Input 组件
-import {Input} from 'ikee-components'
-
+// import {Input} from 'ikee-components'
+import Input from '../components/Input'
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react';
 

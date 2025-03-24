@@ -1,8 +1,8 @@
 
-// import Menu  from './Menu'; // 确保正确导入你的 Menu 组件
-// import MenuItem from './MenuItem';
-// import Submenu from './Submenu';
-import {Menu,MenuItem,Submenu} from 'ikee-components'
+import Menu  from '../components/Menu/Menu'; // 确保正确导入你的 Menu 组件
+import MenuItem from '../components/Menu/MenuItem';
+import Submenu from '../components/Menu/Submenu';
+// import {Menu,MenuItem,Submenu} from 'ikee-components'
 import { action } from '@storybook/addon-actions';
 import type { Meta, Story } from '@storybook/react';
 
